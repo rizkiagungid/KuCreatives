@@ -1,0 +1,882 @@
+/*--------------------------------------------------------------
+	#home transport
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#5.0	transport-services-section 
+--------------------------------------------------------------*/
+.transport-services-section {
+
+	.services-grids > .col {
+		margin-bottom: 30px;
+
+		@include media-query(600px) {
+			width: 100%;
+		}
+	}
+
+
+	.services-grids .grid {
+		border: 1px solid #e7e7e7;
+		padding: 35px 40px;
+		position: relative;
+		@include transition-time(0.5s);
+
+		@include media-query(767px) {
+			padding: 30px;
+		}
+
+		&:after {
+			content: "";
+			@include overlay(transparentize($transport-theme-color2, 0.1));
+			opacity: 0;
+			@include transition-time(0.5s);
+		}
+	}
+
+	.grid h3,
+	.grid p {
+		position: relative;
+		z-index: 1;
+	}
+
+	.grid h3 {
+		font-size: 20px;
+		font-size: calc-rem-value(20);
+		color: $transport-theme-color2;
+		margin: 0 0 1em;
+		padding-bottom: 0.75em;
+		position: relative;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+
+		&:after {
+			content: "";
+			background: $transport-theme-color;
+			width: 26px;
+			height: 3px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	.grid p {
+		margin-bottom: 0;
+	}
+
+	.grid:hover h3,
+	.grid:hover p {
+		color: $white;
+	}
+
+	.grid:hover:after {
+		opacity: 1;
+	}
+
+	.grid:hover {
+		@include background-style("../images/transport/services-grid-bg.jpg", center center, cover, no-repeat, local);
+	}
+
+	.get-service {
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.1	transport-about-section
+--------------------------------------------------------------*/
+.transport-about-section {
+	@include background-style("../images/transport/about-section-bg.jpg", center center, cover, no-repeat, fixed);
+	position: relative;
+
+	&:before {
+		content: "";
+		@include overlay(transparentize($transport-theme-color2, 0.1));
+	}
+
+	.about {
+		padding: 100px 0;
+		
+		@include widther(1200px) {
+			padding-right: 100px;
+		}
+
+		@include media-query(991px) {
+			padding: 80px 0 50px;
+		}
+
+		@include media-query(767px) {
+			padding: 70px 0 50px;
+		}
+	}
+
+	.about p {
+		color: #9a9a9a;
+	}
+
+	.partners {
+		overflow: hidden;
+		margin: 35px -10px 0;
+	}
+
+	.partners .grid {
+		width: calc(25% - 20px);
+		float: left;
+		padding: 10px;
+		margin: 0 10px;
+		border: 1px solid #868c97;
+
+		@include media-query(600px) {
+			width: calc(50% - 20px);
+			margin: 0 10px 10px;
+		}
+	}
+
+	.contact-form {
+		background-color: $transport-theme-color;
+		background-image: url("../images/transport/about-contact-form-bg.png");
+		height: 570px;
+		padding: 60px 55px;
+
+		@include media-query(991px) {
+			height: auto;
+			margin-bottom: 80px;
+		}
+
+		@include media-query(767px) {
+			margin-bottom: 70px;
+			padding: 35px;
+		}
+
+		h2 {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+			font-weight: 600;
+			color: $white;
+			margin: 0 0 1em;
+
+			@include media-query(991px) {
+				font-size: 25px;
+				font-size: calc-rem-value(25);
+			}
+
+			@include media-query(767px) {
+				font-size: 22px;
+				font-size: calc-rem-value(22);
+			}
+		}
+	}
+
+	form > div + div {
+		margin-top: 20px;
+	}
+
+	form label {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		font-weight: 600;
+		color: $white;
+
+		@include media-query(767px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	form input,
+	form select {
+		background-color: $white;
+		height: 35px;
+		border: 0;
+		font-style: normal;
+
+		&:focus {
+			border: 0;
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+
+	form select {
+		background-position: calc(100% - 15px);
+	}
+
+	form button {
+		background-color: $transport-theme-color2;
+		width: 100%;
+		hieght: 35px;
+		line-height: 35px;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		font-weight: 600;
+		color: $white;
+		border: 0;
+		outline: 0;
+		@include transition-time(0.3s);
+
+		&:hover {
+			background-color: darken($transport-theme-color2, 5%);
+		}
+
+		@include media-query(767px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.submit-btn {
+		margin-top: 30px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.2	transport-why-choose-section 
+--------------------------------------------------------------*/
+.transport-why-choose-section  {
+	@extend .construction-why-choose-section; 
+
+	.why-choose-details .icon {
+		background-color: $transport-theme-color;
+	}
+
+	.img-grid {
+		padding-left: 20px;
+	}
+
+	.why-choose-details .icon {
+		@include transition-time(0.5s);
+	}
+
+	.why-choose-details > div:hover .icon {
+		box-shadow: 0 0 0 6px transparentize($transport-theme-color, 0.7);
+	}
+
+	.why-choose-details {
+		padding: 10px;
+		margin: -10px;
+	}
+	
+	.why-choose-details > div {
+		padding: 0 20px 70px 90px;
+
+		@include media-query(1300px) {
+			padding: 0 13px 40px 90px;
+		}
+
+		@include media-query(767px) {
+			padding: 0 13px 30px 80px;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.3	transport-team-section
+--------------------------------------------------------------*/
+.transport-team-section {
+	background-color: #f3f4f6;
+
+	@include media-query(767px) {
+		padding-bottom: 20px;
+	}
+
+	.team-grids {
+		margin: 0 -15px;
+		overflow: hidden;
+	}
+
+	.grid {
+		width: 33.33%;
+		float: left;
+		padding: 0 15px;
+		text-align: center;
+
+		@include media-query(767px) {
+			width: 50%;
+			margin-bottom: 50px;
+		}
+
+		@include media-query(550px) {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	.member-img-social {
+		position: relative;
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($black, 0.5));
+			opacity: 0;
+			@include transition-time(0.3s);
+		}
+	}
+
+	.social-link {
+		width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include center-by-translating();
+		opacity: 0;
+		@include transition-time(0.3s);
+	}
+
+	.social-link ul {
+		list-style: none;
+		overflow: hidden;
+		display: inline-block;
+
+		li {
+			float: left;
+		}
+
+		> li + li {
+			margin-left: 9px;
+		}
+
+		a {
+			background-color: $transport-theme-color;
+			width: 38px;
+			height: 38px;
+			line-height: 38px;
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			color: $white;
+			text-align: center;
+			border-radius: 50%;
+			display: inline-block;
+
+			@include media-query(991px) {
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+	}
+
+	.member-info {
+		background-color: $transport-theme-color;
+		padding: 20px 10px;
+		@include transition-time(0.3s);
+	}
+
+	.member-info h3 {
+		font-size: 22px;
+		font-size: calc-rem-value(22);
+		font-weight: 600;
+		color: $white;
+		margin: 0 0 5px;
+
+		@include media-query(1199px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+
+		@include media-query(991px) {
+			font-size: 17px;
+			font-size: calc-rem-value(17);
+		}
+	}
+
+	.member-info p {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		color: $transport-theme-color2;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.grid:hover .social-link {
+		opacity: 1;
+	}
+
+	.grid:hover .member-img-social:before {
+		opacity: 1;
+	}
+
+	.grid:hover .member-info {
+		background-color: $transport-theme-color;
+	}
+
+	.grid:hover .member-info h3 {
+		color: $white;
+	}
+
+	.team-grids .grid {
+		@include media-query(767px) {
+			img {
+				width: 100%;
+			}
+
+			.social-link {
+				opacity: 1;
+			}
+			.member-img-social:before {
+				opacity: 1;
+			}
+
+			.member-info {
+				background-color: $transport-theme-color;
+			}
+			.member-info h3 {
+				color: $white;
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.4	transport-cta
+--------------------------------------------------------------*/
+.transport-cta {
+	background-color: $transport-theme-color2;
+	text-align: center;
+	padding: 60px 0;
+
+	@include media-query(991px) {
+		padding: 50px 0;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		font-weight: normal;
+		color: $white;
+		line-height: 1.3em;
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+
+		span {
+			color: $transport-theme-color;
+			font-weight: 600;
+			display: block;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.5	transport-testimonials-section
+--------------------------------------------------------------*/
+.transport-testimonials-section {
+	@extend .construction-testimonials-section;
+	padding-bottom: 95px;
+
+	@include media-query(991px) {
+		padding-bottom: 75px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 65px;
+	}
+
+	.grid:before {
+		color: $transport-theme-color;
+	}
+
+	.client-info img {
+		border: 2px solid $transport-theme-color;
+	}
+
+	@include widther(992px) {
+		.owl-controls .owl-nav .owl-prev,
+		.owl-controls .owl-nav .owl-next {
+			&:hover {
+				background: $transport-theme-color;
+				color: $white;
+			}
+		}
+	}
+
+	@include media-query(991px) {
+		.owl-controls .owl-nav .owl-prev,
+		.owl-controls .owl-nav .owl-next {
+
+			&:hover {
+				background: $transport-theme-color;
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.6	transport-faq-news
+--------------------------------------------------------------*/
+.transport-faq-news {
+	background-color: $transport-theme-color2;
+	background-image: url("../images/transport/faq-news-bg.png");
+
+	.panel-group {
+		margin-bottom: 0;
+
+		.panel-default {
+			background: transparent;
+			border: 0;
+			border-radius: 0;
+		}
+
+		.panel-group .panel+.panel {
+		    margin-top: 8px;
+		}
+
+		.panel-heading {
+			background-color: transparent;
+			padding: 0;
+			border-radius: 0;
+		}
+
+		.panel-heading a {
+			font-family: $heading-font;
+			background-color: $transport-theme-color;	
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			font-weight: 600;
+			color: $white;
+			display: block;
+			padding: 15px 25px;
+			position: relative;
+
+			@include media-query(991px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+				padding: 12px 20px;
+	        }
+
+			@include media-query(767px) {
+				padding: 12px 15px;
+	        }
+
+			&:before {
+				font-family: "FontAwesome";
+				content: "\f068";
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+				position: absolute;
+				right: 25px;
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+				@include transition-time(0.3s);
+
+				@include media-query(991px) {
+					font-size: 14px;
+					font-size: calc-rem-value(14);
+					right: 20px;
+		        }
+
+				@include media-query(400px) {
+					display: none;
+		        }
+			}
+		}
+
+		.panel-heading .collapsed:before {
+			content: "\f067";
+		}
+
+		.panel-heading + .panel-collapse > .panel-body {
+			background: transparentize($white, 0.1);
+			border: 0;
+			padding: 24px 200px 24px 33px;
+
+			@include media-query(1800px) {
+				background-color: $white;
+			}
+
+			@include media-query(991px) {
+				padding: 20px;
+			}
+
+			@include media-query(767px) {
+				padding: 15px;
+			}
+		}
+
+		.panel-body {
+			position: relative;
+
+			@include media-query(1199px) {
+				min-height: 170px;
+			}
+		}
+
+		.panel-body img {
+			position: absolute;
+			right: 33px;
+			top: 24px;
+
+			@include media-query(991px) {
+				position: static;
+			}
+		}
+
+		.panel-body p {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.news-block {
+		@include media-query(1199px) {
+			margin-top: 70px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 50px;
+		}
+	}
+
+	.news-grids {
+		.grid {
+			overflow: hidden;
+		}
+
+		> .grid + .grid {
+			margin-top: 10px;
+
+			@include media-query(767px) {
+				margin-top: 30px;
+			}
+		}
+
+		.entry-media {
+			width: 160px;
+			float: left;
+			@include media-query(767px) {
+				width: 100%;
+				float: none;
+			}
+		}
+
+		.entry-details {
+			background-color: $white;
+			width: calc(100% - 170px);
+			min-height: 115px;
+			float: left;
+			margin-left: 10px;
+			padding: 22px 35px;
+
+			@include media-query(767px) {
+				width: 100%;
+				min-height: auto;
+				float: none;
+				margin: 0;
+				padding: 22px 20px;
+			}
+		}
+
+		.entry-details h3 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			font-weight: 600;
+			line-height: 1.2em;
+			margin: 0 0 0.44em;
+
+			@include media-query(767px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+		}
+
+		.entry-details h3 a {
+			color: #272e33;
+		}
+
+		.entry-meta {
+			list-style: none;
+			overflow: hidden;
+		}
+
+		.entry-meta > li {
+			float: left;
+			font-sie: 14px;
+			font-size: calc-rem-value(14);
+		}
+
+		.entry-meta > li + li {
+			margin-left: 12px;
+			padding-left: 12px;
+			position: relative;
+		}
+
+		.entry-meta > li + li:before {
+			content: "";
+			background-color: $transport-theme-color;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translatingY();
+		}
+
+		.entry-meta a {
+			color: #959595;
+		}
+
+		.grid:hover .entry-details {
+			background-color: $transport-theme-color;
+		}
+
+		.grid:hover .entry-details a {
+			color: $white;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.7	transport-map-section
+--------------------------------------------------------------*/
+.transport-map-section {
+	.map {
+		width: 100%;
+		height: 280px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#5.8	transport-contact-section
+--------------------------------------------------------------*/
+.transport-contact-section {
+	@extend .construction-contact-section;
+	background-color: $white;
+
+
+	&:before {
+		display: none;
+	}
+
+	.contact-block {
+		background-color: transparent;
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	.contact-block .contact-info {
+		@include widther(1200px) {
+			padding-right: 22px;
+		}
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		background-color: #e8ecf1;
+	}
+
+	.contact-form .form .submit-btn button {
+		background-color: $transport-theme-color;
+		color: $white;
+	}
+
+	.popup-map-section {
+		position: absolute;
+		left: 5px;
+		bottom: 0;
+		border-bottom: 1px dashed #9f9f9f;
+
+		@include media-query(1199px) {
+			max-width: 140px;
+			position: static;
+			left: auto;
+			bottom: auto;
+			margin-top: 25px;
+		}
+
+		a {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			font-weight: bold;
+			color: $transport-theme-color;
+
+			@include media-query(767px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+		}
+
+		a:focus {
+			border: 0;
+			outline: 0;
+		}
+
+		a i {
+			display: inline-block;
+			padding-right: 8px;
+		}
+	}
+
+}
+
+
+/*--------------------------------------------------------------
+#5.9	transport-site-footer
+--------------------------------------------------------------*/
+.transport-site-footer {
+	.upper-footer {
+		background-color: $transport-theme-color2;
+	}
+
+	.copyright-info {
+		background-color: darken($transport-theme-color2, 3%);
+	}
+
+	.upper-footer a:hover {
+		color: $transport-theme-color;
+	}
+
+	.upper-footer .links-widget ul li:before {
+		color: #8a8a8a;
+	}
+
+	.upper-footer .links-widget ul li:hover:before {
+		color: $transport-theme-color;
+	}
+
+	.links-widget ul li:before,
+	.about-widget ul li i {
+		color: $transport-theme-color;
+	}
+
+	.twitter-feed-widget a {
+		color: $transport-theme-color;
+
+		&:hover {
+			color: $transport-theme-color;
+		}
+	}
+
+	.copyright-info .copyright-area a {
+		color: $transport-theme-color;
+	}
+
+	.copyright-info .social-links a:hover {
+		color: $transport-theme-color;
+	}
+
+}

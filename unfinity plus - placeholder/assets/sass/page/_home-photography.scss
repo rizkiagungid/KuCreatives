@@ -1,0 +1,575 @@
+/*--------------------------------------------------------------
+	#home photography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#15.0	photography-about-section
+--------------------------------------------------------------*/
+.photography-about-section {
+    padding: 150px 0 250px;
+    position: relative;
+
+    @include media-query(991px) {
+        padding: 100px 0;
+    }
+
+    .img-holder {
+        padding: 100px 0 0 60px;
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 0 35px transparentize($black, 0.9);
+        }
+
+        &:before {
+            content: "";
+            background-color: $photography-theme-color;
+            width: calc(100% - 190px);
+            height: calc(100% + 100px);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .about-text {
+        padding-top: 68px;
+        margin-left: -110px;
+        position: relative;
+        z-index: 10;
+
+        @include media-query(991px) {
+            margin: 70px 0 0;
+		}
+
+        h3 {
+            font-size: 15px;
+            font-size: calc-rem-value(15);
+            font-weight: normal;
+            color: #555555;
+            margin: 0 0 2.47em;
+
+            @include media-query(991px) {
+                margin: 0 0 1.5em;
+            }
+        }
+
+        h3:first-letter {
+            font-size: 36px;
+            font-size: calc-rem-value(36);
+            font-weight: 500;
+            color: #000001;
+        }
+
+        p {
+            font-family: $heading-font;
+            font-size: 15px;
+            font-size: calc-rem-value(15);
+            line-height: 1.8em;
+            margin-bottom: 1.5em;
+
+            @include media-query(991px) {
+                font-size: 14px;
+                font-size: calc-rem-value(14);
+            }
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+#15.1	photography-gallery
+--------------------------------------------------------------*/
+.photography-gallery {
+    padding: 0 0 150px;
+
+    @include widther(992px) {
+        margin-top: -20px;
+    }
+
+    @include media-query(991px) {
+        padding: 0 0 80px;
+    }
+
+    .photography-section-title {
+        position: static;
+        text-align: right;
+
+        h2 {
+            margin: 0 0 0.3em;
+        }
+    }
+
+    .gallery-title {
+        font-family: $heading-font;
+        
+        h3 {
+            font-size: 24px;
+            font-size: calc-rem-value(24);
+            font-weight: 500;
+            color: #000001;
+            margin: 0 0 0.5em;   
+            
+            @include media-query(991px) {
+                font-size: 20px;
+                font-size: calc-rem-value(20);
+            }
+        }
+
+        p {
+            font-size: 15px;
+            font-size: calc-rem-value(15);
+            color: #555;
+            margin-bottom: 1.8em;
+
+            @include media-query(991px) {
+                font-size: 14px;
+                font-size: calc-rem-value(14);
+            }
+        }
+
+        ul {
+            list-style: none;
+            overflow: hidden;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ul li i {
+            display: inline-block;
+            padding-right: 5px;
+            color: #333;
+        }
+
+        ul > li + li {
+            margin-left: 20px;
+        }
+    }
+
+    .first-row {
+        padding-bottom: 120px;
+       
+        @include media-query(991px) {
+            padding-bottom: 73px;
+        }
+    }
+
+    .second-row {
+        padding-bottom: 150px;
+       
+        @include media-query(991px) {
+            padding-bottom: 80px;
+        }
+    }
+
+    .first-row .gallery-title {
+        padding: 220px 65px 0 0;
+
+        @include media-query(1199px) {
+            padding: 140px 0 0;
+        }
+
+        @include media-query(991px) {
+            padding: 0;
+            margin-bottom: 45px;
+        }
+    }
+
+    .first-row .gallery-grids {
+        overflow: hidden;
+        margin: 0 -15px;
+    }
+
+    .first-row .gallery-grids .grids {
+        width: calc(50% - 30px);
+        float: left;
+        margin: 0 15px;
+
+        @include media-query(767px) {
+            width: calc(50% - 15px);
+            float: left;
+            margin: 0 7.5px;
+        }
+    }
+
+    .first-row .left-grids .img-grid {
+        margin-bottom: 30px;
+
+        @include media-query(767px) {
+           margin-bottom: 15px;
+        }
+    }
+
+    .img-grid {
+        position: relative;
+        overflow: hidden;
+
+        .img-overlay {
+            background-color: transparentize($photography-theme-color, 0.1);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            opacity: 0;
+            @include transition-time(0.6s);
+        }
+
+        .img-overlay a {
+            @include background-image-with-color(#fff, "../images/photography/gallery/img-link.png", center center, auto, no-repeat, local);
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 16px;
+            font-size: calc-rem-value(16);
+            color: $black;
+            text-align: center;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            @include center-by-translating();
+
+            @include media-query(1199px) {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;    
+            }
+
+            @include media-query(767px) {
+                background-size: 15px 15px;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;    
+            }
+        }
+    }
+
+    .img-grid:hover .img-overlay {
+        top: 0;
+        opacity: 1;
+    }
+
+    .second-row .gallery-title {
+        padding: 180px 75px 0 0;
+
+        @include media-query(1199px) {
+            padding: 130px 75px 0 0;
+        }
+
+        @include media-query(991px) {
+            padding: 0;
+            margin-top: 45px;
+        }
+    }
+
+    .second-row .img-grid {
+        max-width: 606px;
+    }
+
+    .third-row .gallery-title {
+        margin-top: 45px;
+        text-align: center;
+
+        ul {
+            display: inline-block;
+        }
+    }
+
+    .third-row .last-grid {
+        max-width: 371px;
+        @include media-query(767px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+#15.2	photography-blog-section
+--------------------------------------------------------------*/
+.photography-blog-section {
+    .blog-grids img {
+        width: auto;
+    }
+
+    .blog-grids .grid {
+        position: relative;
+    }
+
+    .post-info {
+        padding-left: 50px;
+        position: absolute;
+        top: 35px;
+        left: 20px;
+
+        img {
+            position: absolute;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        h5,
+        span {
+            color: $white;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-size: calc-rem-value(18);
+            font-weight: 500;
+            color: $white;
+            margin: 0;
+
+            @include media-query(991px) {
+                font-size: 15px;
+                font-size: calc-rem-value(15);    
+            }
+        }
+
+        > span {
+            font-size: 12px;
+            font-size: calc-rem-value(12);
+        }
+    }
+
+    .entry-details {
+        position: absolute;
+        left: 37px;
+        bottom: 60px;
+        padding-right: 15px;
+
+        h3 {
+            font-size: 22px;
+            font-size: calc-rem-value(22);
+            font-weight: 500;
+            line-height: 1.37em;
+            margin: 0 0 1.34em;
+
+            @include media-query(1199px) {
+                font-size: 20px;
+                font-size: calc-rem-value(20);    
+            }
+
+            @include media-query(991px) {
+                font-size: 16px;
+                font-size: calc-rem-value(16);    
+            }
+        }
+
+        h3 a {
+            color: $white;
+        }
+    }
+
+    .owl-controls {
+        text-align: right;
+        margin-top: 10px;
+        padding-right: 40px;
+    }
+
+    .owl-controls .owl-nav .owl-next,
+    .owl-controls .owl-nav .owl-prev {
+        background-color: transparent;
+        padding: 0;
+        color: $black;
+        font-size: 25px;
+        font-size: calc-rem-value(25);
+
+        @include media-query(991px) {
+            font-size: 20px;
+            font-size: calc-rem-value(20);    
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $photography-theme-color;
+        }
+    }
+
+    .owl-controls .owl-nav .owl-prev {
+        margin-right: 60px;
+
+        @include media-query(991px) {
+            margin-right: 40px;    
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+#15.3	photography-contact-section
+--------------------------------------------------------------*/
+.photography-contact-section {
+    padding-top: 80px;
+
+    @include media-query(1199px) {
+        padding-bottom: 150px;
+    }
+
+    @include media-query(991px) {
+        padding-bottom: 90px;
+    }
+
+    .contact-grids {
+        overflow: hidden;
+    }
+
+    .grid {
+        width: 50%;
+        float: left;
+
+        @include media-query(1199px) {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    .contact-form-grid .inner {
+        max-width: 570px;
+        margin-left: auto;
+        padding: 230px 35px 0 0;
+
+        @include media-query(1199px) {
+            max-width: 700px;
+            padding: 0 35px;
+            margin: 150px 0 100px;
+        }
+
+        @include media-query(991px) {
+            max-width: 100%;
+            padding: 0 35px;
+            margin: 100px 0;
+        }
+
+        @include media-query(767px) {
+            padding: 0 15px;
+            margin: 80px 0;
+        }
+    }
+
+    .contact-title {
+        > span {
+            font-family: $heading-font;
+            font-size: 16px;
+            font-size: calc-rem-value(16);
+            font-weight: 500;
+            color: #999;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-size: calc-rem-value(24);
+            color: #000001;
+            margin: 0 0 1em;
+        }
+    }
+
+    .contact-form {
+        padding-top: 10px;
+
+        form {
+            overflow: hidden;
+            margin: 0 -15px;
+            @include placeholder-style(#555, 15px, normal);
+        }
+
+        form > div {
+            width: 50%;
+            float: left;
+            padding: 0 15px;
+            margin-bottom: 18px;
+
+            @include media-query(550px) {
+                width: 100%;
+            }
+        }
+
+        input,
+        textarea {
+            font-size: 15px;
+            font-size: calc-rem-value(15);
+            color: #555;
+            height: 50px;
+            padding: 6px 0;
+            border: 0;
+            border-bottom: 1px solid #9c9c9c;
+            border-radius: 0;
+            box-shadow: none;
+
+            @include media-query(767px) {
+                font-size: 14px;
+                font-size: calc-rem-value(14);
+            }
+        }
+
+        textarea {
+            height: 105px;
+        }
+
+        .message-area,
+        .submit-btn-wrapper {
+            width: 100%;
+            float: none;
+        }
+
+        .submit-btn-wrapper {
+            margin: 60px 0 0;
+
+            @include media-query(767px) {
+                margin: 40px 0 0;
+            }
+
+            button {
+                font-family: $heading-font;
+                background-color: $photography-theme-color;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                font-size: 15px;
+                font-size: calc-rem-value(15);
+                font-weight: 500;
+                color: $white;
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+                text-transform: uppercase;
+                @include transition-time(0.3s);
+            }
+
+            button:hover {
+                background-color: darken($photography-theme-color, 10%);
+            }
+        }
+    }
+
+    .contact-map-grid {
+        background-color: red;
+        height: 950px;
+        position: relative;
+
+        @include media-query(1199px) {
+            height: 450px;
+        }
+
+        @include media-query(991px) {
+           height: 350px;
+        }
+    }
+
+    .photography-contact-map {
+        width: 100%;
+        height: 100%;;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

@@ -1,0 +1,1034 @@
+/*--------------------------------------------------------------
+	#home app landing
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#8.0	app-landing-overview
+--------------------------------------------------------------*/
+.app-landing-overview {
+	padding-bottom: 120px;
+
+	@include media-query(991px) {
+		padding-bottom: 80px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 70px;
+	}
+
+	.left-col {
+		@include widther(992px) {
+			padding-right: 82px;
+		}
+	}
+
+	.intro {
+		margin-bottom: 50px;
+	}
+
+	.intro > span {
+		font-family: $heading-font;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		color: #121212;
+
+		@include media-query(767px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.intro h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		color: #121212;
+		margin: 0.2em 0 0.67em;
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	.features > div {
+		padding-left: 58px;
+		position: relative;
+	}
+
+	.features > div + div {
+		margin-top: 20px;
+	}
+
+	.features .icon {
+		background: $applanding-theme-color;
+		@include linear-gradient-bg(left, $applanding-theme-color, $applanding-theme-color2);
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.features h3 {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		font-weight: 600;
+		color: #121212;
+		margin: 0 0 0.55em;
+
+		@include media-query(991px) {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+		}
+	}
+
+	/*** middle col ***/
+	.middle-col {
+		@include widther(992px) {
+			margin-top: 140px;
+			margin-left: -35px;
+		}
+
+		@include media-query(991px) {
+			margin: 50px 0;
+		}
+
+		img {
+			box-shadow: 0 0 65px transparentize($black, 0.9);
+		}
+	}
+
+	/*** right col ***/
+	.right-col {
+		@include widther(992px) {
+			padding-left: 60px;
+			padding-top: 60px;
+		}
+	}
+
+	.right-col h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		font-weight: normal;
+		color: #121212;
+		margin: 0 0 0.63em;
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	.app-info {
+		margin-top: 50px;
+	}
+
+	.app-info > div {
+		padding-left: 68px;
+		position: relative;
+	}
+
+	.app-info > div + div {
+		margin-top: 41px;
+	}
+
+	.app-info .icon {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		text-align: center;
+		border: 2px solid $applanding-theme-color2;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+	}
+
+	.app-info h3 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		font-weight: 600;
+		color: #121212;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+
+		@include media-query(767px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	.app-info h3 + span {
+		font-family: $heading-font;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		color: #121212;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#8.1	app-landing-features
+--------------------------------------------------------------*/
+.app-landing-features {
+	background: $applanding-theme-color2;
+	@include linear-gradient-bg(left, $applanding-theme-color2, $applanding-theme-color);
+	position: relative;
+
+	.left-col {
+		text-align: right;
+		padding: 0 45px 0 85px;
+
+		@include media-query(991px) {
+			padding: 0;
+			text-align: left;
+			margin-bottom: 40px;
+		}
+	}
+
+	.left-col > .feature + .feature,
+	.right-col > .feature + .feature {
+		margin-top: 60px;
+
+		@include media-query(991px) {
+			margin-top: 40px;
+		}
+	}
+
+	.right-col {
+		padding-right: 35px;
+		@include media-query(991px) {
+			padding-right: 0;
+		}
+	}
+
+	.feature h3 {
+		font-size: 20px;
+		font-size: calc-rem-value(20);
+		font-weight: 600;
+		color: $white;
+		margin: 0 0 1em;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.feature p {
+		color: $white;
+		margin: 0;
+	}
+
+	.features-phone {
+		position: absolute;
+		left: 52%;
+		bottom: -40px;
+		@include translatingX();
+
+		@include media-query(991px) {
+			display: none;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#8.2	app-landing-testimonials
+--------------------------------------------------------------*/
+.app-landing-testimonials {
+	.app-landing-testimonials-slider img {
+		width: auto;
+	}
+
+	.grid {
+		padding: 53px 100px 77px;
+		margin: 15px;
+		box-shadow: 0 0 15px transparentize($black, 0.9);
+		overflow: hidden;
+		position: relative;
+
+		@include media-query(991px) {
+			padding: 53px 50px 77px;
+		}
+
+		@include media-query(767px) {
+			padding: 40px 25px 77px;
+		}
+
+		&:before {
+			content: "";
+			background: $applanding-theme-color2;
+			@include linear-gradient-bg(left, $applanding-theme-color2, $applanding-theme-color);
+			width: 411px;
+			height: 217px;
+			position: absolute;
+			left: -120px;
+			bottom: -165px;
+			border-radius: 50%;
+		}
+
+		&:after {
+			content: "";
+			@include background-style("../images/app-landing/testimonials/quote.png", center center, auto, no-repeat, local);
+			width: 45px;
+			height: 39px;
+			position: absolute;
+			right: 45px;
+			top: 30px;
+		}
+	}
+
+	.grid .client-info {
+		width: 117px;
+		float: left;
+		text-align: center;
+
+		@include media-query(991px) {
+			width: 100%;
+			float: none;
+			text-align: left;
+		}
+
+		h4 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			font-weight: 600;
+			color: #121212;
+			margin: 0.56em 0 7px;
+
+			@include media-query(991px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+
+		.rating i {
+			font-size: 14px;
+			color: #f2ca12;
+		}
+	}
+
+	.grid .client-quote {
+		width: calc(100% - 117px);
+		float: left;
+		padding-left: 32px;
+
+		@include media-query(991px) {
+			width: 100%;
+			float: none;
+			padding-left: 0;
+			margin-top: 20px;
+		}
+	}
+
+	.client-quote h3 {
+		font-size: 20px;
+		font-size: calc-rem-value(20);
+		font-weight: 500;
+		color: #222;
+		margin: 0 0 0.65em;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.client-quote p {
+		margin: 0;
+	}
+
+	.owl-controls {
+		@include widther(992px) {
+			margin: 0;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translatingY();
+		}
+	}
+
+	.owl-controls .owl-nav .owl-prev,
+	.owl-controls .owl-nav .owl-next {
+		background: transparent;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: $applanding-theme-color;
+		padding: 0;
+		border: 2px solid $applanding-theme-color;
+		border-radius: 50%;
+
+		&:hover {
+			background: $applanding-theme-color;
+			color: $white;
+		}
+
+		@include widther(992px) {
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+		}
+	}
+
+	.owl-controls .owl-nav .owl-prev {
+		@include widther(992px) {
+			left: -50px;
+		}
+		@include widther(1200px) {
+			left: -100px;
+		}
+	}
+
+	.owl-controls .owl-nav .owl-next {
+		@include widther(992px) {
+			right: -50px;
+		}
+		@include widther(1200px) {
+			right: -100px;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#8.3	app-landing-cta
+--------------------------------------------------------------*/
+.app-landing-cta {
+	@include background-style("../images/app-landing/cta-bg.jpg", center center, cover, no-repeat, fixed);
+	padding: 170px 0;
+	text-align: center;
+	position: relative;
+
+	@include media-query(1199px) {
+		padding: 120px 0;
+	}
+
+	@include media-query(991px) {
+		padding: 80px 0;
+	}
+
+	&:before {
+		content: "";
+		@include overlay(transparentize($black, 0.2));
+	}
+
+	.video-btn {
+		background-color: $white;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		color: $applanding-theme-color;
+		border-radius: 50%;
+		display: inline-block;
+
+		@include media-query(1199px) {
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+		}
+
+		@include media-query(991px) {
+			width: 70px;
+			height: 70px;
+			line-height: 70px;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#8.4	app-landing-screenshot
+--------------------------------------------------------------*/
+.app-landing-screenshot {
+	// .app-landing-screenshot-slider-wrapper {
+	// 	width: 297px;
+	// 	height: 594px;
+	// 	margin: 0 auto;
+
+	// 	.slider-phone {
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		position: absolute;
+	// 		left: 50%;
+	// 		top: 0;
+	// 		@include translatingX();
+	// 		z-index: 10;
+	// 		text-align: center;
+
+	// 		@include media-query(991px) {
+	// 			z-index: 1;
+	// 		}
+	// 	}
+	// }
+
+	// .screenshot {
+	// 	width: 260px;
+	// 	height: 461px;
+	// 	margin: 65px auto 0;
+	// 	position: relative;
+	// 	z-index: -1;
+	// }
+
+	// .owl-controls {
+	// 	margin-top: 90px;
+
+	// 	@include widther(992px) {
+	// 		margin: 0;
+	// 		width: 250%;
+	// 		position: absolute;
+	// 		left: 50%;
+	// 		top: 50%;
+	// 		@include center-by-translating();
+	// 	}
+	// }
+
+	// .owl-controls .owl-nav .owl-prev,
+	// .owl-controls .owl-nav .owl-next {
+	// 	font-family: $heading-font;
+	// 	background: transparent;
+	// 	font-size: 18px;
+	// 	font-size: calc-rem-value(18);
+	// 	color: #545454;
+	// 	padding: 0;
+	// 	top: 0;
+	// 	letter-spacing: 2px;
+	// 	position: relative;
+
+	// 	@include widther(992px) {
+	// 		position: absolute;
+	// 	}
+
+	// 	&:hover {
+	// 		background: transparent;
+	// 		color: $applanding-theme-color;
+	// 	}
+
+	// 	@include media-query(991px) {
+	// 		font-size: 14px;
+	// 		font-size: calc-rem-value(14);
+	// 	}
+	// }
+
+	// .owl-controls .owl-nav .owl-prev {
+	// 	@include widther(992px) {
+	// 		left: 0;
+	// 	}
+	// }
+
+	// .owl-controls .owl-nav .owl-next {
+	// 	@include widther(992px) {
+	// 		right: 0;
+	// 	}
+	// }
+
+	.app-screenshot-slider-outer {
+		width: 265px;
+		height: 490px;
+		margin: 65px auto 0;
+		position: relative;
+
+		@include media-query(767px) {
+			margin-top: 0;
+		}
+
+		.mockup {
+			@include media-query(767px) {
+				display: none;
+			}
+		}
+
+		.mockup .top {
+			@include background-style("../images/app-landing/screenshot-slider/iphone-top-part.png", center center, cover, no-repeat, local);
+			width: 317px;
+			height: 76px;
+			position: absolute;
+			left: 50%;
+			top: -76px;
+			@include translatingX();
+		}
+
+		.mockup .left {
+			@include background-style("../images/app-landing/screenshot-slider/iphone-left-part.png", center center, cover, no-repeat, local);
+			width: 19px;
+			height: 570px;
+			position: absolute;
+			left: -25px;
+			bottom: -80px;
+			z-index: 20;
+		}
+
+		.mockup .right {
+			@include background-style("../images/app-landing/screenshot-slider/iphone-right-part.png", center center, cover, no-repeat, local);
+			width: 18px;
+			height: 570px;
+			position: absolute;
+			right: -27px;
+			bottom: -80px;
+			z-index: 20;
+		}
+
+		.mockup .bottom {
+			@include background-style("../images/app-landing/screenshot-slider/iphone-bottom-part.png", center center, cover, no-repeat, local);
+			width: 280px;
+			height: 76px;
+			position: absolute;
+			left: -6px;
+			bottom: -87px;
+			z-index: 20;
+		}
+	}
+
+	.app-screenshot-slider img {
+		width: auto;
+	}
+
+	.owl-carousel .owl-stage-outer {
+		overflow: visible !important;
+
+		@include media-query(767px) {
+			overflow: hidden !important;
+		}
+	}
+
+	.owl-stage-outer .owl-item img {
+		opacity: 0.5;
+	}
+
+	.owl-stage-outer .active img {
+		opacity: 1;
+	}
+
+	.owl-controls .owl-nav .owl-prev,
+	.owl-controls .owl-nav .owl-next {
+		background-color: transparentize($applanding-theme-color, 0.2);
+		border-radius: 0;
+		@include transition-time(0.3s);
+
+		&:hover {
+			background-color: $applanding-theme-color;
+		}
+	}
+
+
+	.download {
+		text-align: center;
+		margin-top: 125px;
+		position: relative;
+		z-index: 10;
+
+		@include media-query(767px) {
+			margin-top: 75px;
+		}
+
+		h4 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			font-weight: 600;
+			color: #2f2f2f;
+			margin: 0 0 15px;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#8.5	app-landing-pricing
+--------------------------------------------------------------*/
+.app-landing-pricing {
+	@include background-style("../images/app-landing/pricing-bg.jpg", center center, cover, no-repeat, fixed);
+	position: relative;
+
+	&:before {
+		content: "";
+		@include background-style("../images/app-landing/pricing-overlay.png", center center, auto, repeat, local);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.app-landing-section-title h2 {
+		color: $white;
+	}
+
+	.pricing-grids {
+		overflow: hidden;
+		margin: 0 -15px;
+
+		.grid {
+			width: 50%;
+			float: left;
+			padding: 0 15px;
+			text-align: center;
+
+			@include media-query(600px) {
+				width: 100%;
+				float: none;
+			}
+		}
+
+		> .grid + .grid {
+			@include media-query(600px) {
+				margin-top: 35px;
+			}
+		}
+	}
+
+	.pricing-header {
+		background: $applanding-theme-color2;
+		@include linear-gradient-bg(left, $applanding-theme-color2, $applanding-theme-color);
+		padding: 28px 0;
+
+		h2 {
+			font-size: 48px;
+			font-size: calc-rem-value(48);
+			font-weight: normal;
+			color: $white;
+			margin: 0;
+			padding-left: 10px;
+			display: inline-block;
+			position: relative;
+
+			@include media-query(1199px) {
+				font-size: 40px;
+				font-size: calc-rem-value(40);
+			}
+
+			@include media-query(767px) {
+				font-size: 35px;
+				font-size: calc-rem-value(35);
+			}
+		}
+
+		h2 span {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			position: absolute;
+			top: 7px;
+			left: 0;
+		}
+
+		.type {
+			font-family: $heading-font;
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			color: $white;
+			font-weight: 600;
+			margin: 0;
+		}
+	}
+
+	.pricing-body {
+		background-color: $white;
+
+		ul {
+			list-style: none;
+			padding: 50px 10px;
+			border-bottom: 1px solid #efefef;
+
+			@include media-query(991px) {
+				padding: 40px 10px;
+			}
+		}
+
+		ul li {
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+
+			@include media-query(991px) {
+				font-size: 15px;
+				font-size: calc-rem-value(15);
+			}
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+
+		ul > li + li {
+			margin-top: 13px;
+		}
+	}
+
+	.pricing-footer {
+		padding: 25px 0;
+
+		@include media-query(991px) {
+			padding: 20px 0;
+		}
+
+		@include media-query(767px) {
+			padding: 15px 0;
+		}
+
+		a {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			font-weight: 600;
+			color: #666;
+
+			@include media-query(1199px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+
+		a:hover {
+			color: #222;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#8.6	app-landing-newsletter-contact
+--------------------------------------------------------------*/
+.app-landing-newsletter-contact {
+	text-align: center;
+
+	/*** newsletter ***/
+	.newsletter h2 {
+		font-size: 36px;
+		font-size: calc-rem-value(36);
+		font-weight: normal;
+		margin: 0 0 1em;
+
+		@include media-query(991px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+		}
+
+		@include media-query(767px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+	}
+
+	form {
+		max-width: 540px;
+		margin: 0 auto;
+
+		> div:last-child {
+			margin-top: 45px;
+		}
+
+		input {
+			height: auto;
+			text-align: center;
+			border: 0;
+			border-bottom: 2px solid #333;
+			padding: 15px 12px;
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+		input:focus {
+			box-shadow: none;
+		}
+
+		button {
+			font-family: $heading-font;
+			background: $applanding-theme-color2;
+			@include linear-gradient-bg(left, $applanding-theme-color2, $applanding-theme-color);
+			width: 170px;
+			height: 45px;
+			line-height: 42px;
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			font-weight: 600;
+			color: $white;
+			border: 0;
+			outline: 0;
+
+			@include media-query(991px) {
+				width: 150px;
+				height: 40px;
+				line-height: 37px;
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+
+			@include media-query(767px) {
+				width: 130px;
+				height: 40px;
+				line-height: 37px;
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+
+		button:hover {
+			background: $applanding-theme-color;
+			@include linear-gradient-bg(left, $applanding-theme-color, $applanding-theme-color2);
+		}		
+	}
+
+	/*** contact-boxes***/
+	.contact-boxes {
+		overflow: hidden;
+		margin: 70px -15px;
+
+		@include media-query(767px) {
+			margin: 50px -15px;
+		}
+
+		.box {
+			width: calc(33.33% - 30px);
+			max-height: 218px;
+			float: left;
+			margin: 20px 15px 50px;
+			padding: 50px 70px;
+			box-shadow: 0 12px 50px transparentize($black, 0.9);
+
+			@include media-query(1199px) {
+				padding: 50px 30px;
+			}
+
+			@include media-query(991px) {
+				width: calc(50% - 30px);
+			}
+
+			@include media-query(767px) {
+				width: calc(100% - 30px);
+				padding: 50px 15px;
+			}
+		}
+
+		.box i {
+			font-size: 36px;
+			font-size: calc-rem-value(36);
+			color: $applanding-theme-color2;
+			background: -webkit-linear-gradient($applanding-theme-color2, $applanding-theme-color);
+			background: linear-gradient($applanding-theme-color2, $applanding-theme-color);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-fill-color: transparent;
+			display: inline-block;
+			margin-bottom: 28px;
+
+			@include media-query(991px) {
+				font-size: 30px;
+				font-size: calc-rem-value(30);
+				mrgin-bottom: 20px;
+			}
+		}
+
+		.box p {
+			font-family: $heading-font;
+			font-size: 16px;
+			font-size: calc-rem-value(16);
+			font-weight: 600;
+
+			@include media-query(991px) {
+				font-size: 15px;
+				font-size: calc-rem-value(15);
+			}
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+
+		.box p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	/*** social-info ***/
+	.social-info {
+
+		h2 {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+			font-weight: normal;
+			margin: 0 0 1em;
+
+			@include media-query(991px) {
+				font-size: 25px;
+				font-size: calc-rem-value(25);
+			}
+
+			@include media-query(767px) {
+				font-size: 22px;
+				font-size: calc-rem-value(22);
+			}
+		}
+
+		ul {
+			list-style: none;
+			overflow: hidden;
+			display: inline-block;
+		}
+
+		ul li {
+			float: left;
+		}
+
+		ul > li + li {
+			margin-left: 30px;
+
+			@include media-query(991px) {
+				margin-left: 20px;
+			}
+
+			@include media-query(767px) {
+				margin-left: 15px;
+			}
+		}
+
+		ul li a {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+			color: #121212;
+
+			@include media-query(991px) {
+				font-size: 22px;
+				font-size: calc-rem-value(22);
+			}
+
+			@include media-query(767px) {
+				font-size: 18px;
+				font-size: calc-rem-value(18);
+			}
+		}
+
+		ul li a:hover {
+			color: $applanding-theme-color2;
+		}
+	}
+}
+
+

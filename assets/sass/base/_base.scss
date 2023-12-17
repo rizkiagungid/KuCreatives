@@ -1,0 +1,189 @@
+/*--------------------------------------------------------------
+#0.1    Theme Reset Style
+--------------------------------------------------------------*/
+html {
+    font-size: $base-font-size + px;
+}
+
+body {
+    font-family: $base-font;
+    background-color: $white;
+    font-size: 15px;
+    font-size: calc-rem-value(15);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    
+    @include media-query( 767px ) {
+        font-size: 14px;
+        font-size: calc-rem-value(14);
+    }
+}
+
+p,
+ul,
+li {
+    color: $text-color;
+}
+
+p {
+    line-height: 1.7em;    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    font-weight: bold;
+    color: $heading-color;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    @include transition-time(0.2s);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/*--------------------------------------------------------------
+#0.2    Global Elements
+--------------------------------------------------------------*/
+.page-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.medical-home p {
+    color: #828fa6;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.fi:before {
+    margin: 0;
+}
+
+.section-padding {
+    padding: 100px 0;
+
+    @include media-query(991px) {
+        padding: 80px 0;
+    }
+
+    @include media-query(767px) {
+        padding: 70px 0;
+    }
+}
+
+.agency-home {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #3d4149;
+    }
+
+    p {
+        color: #6a7382;
+    }
+}
+
+.finance-home {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $finance-theme-color;
+    }
+}
+
+.seo-home {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #3d4149;
+    }
+
+    .section-padding {
+        padding: 110px 0;
+
+        @include media-query(991px) {
+            padding: 90px 0;
+        }
+
+        @include media-query(767px) {
+            padding: 70px 0;
+        }
+    }
+}
+
+/*** fancybox style ***/
+.fancybox-wrap .fancybox-skin {
+    padding: 8px !important;
+}
+
+
+
+/** for popup image ***/
+.mfp-wrap {
+    background-color: transparentize($black, 0.1);
+    z-index: 99999;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/*** for fancybox video ***/
+.fancybox-overlay {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999 !important;
+}
+
+.fancybox-wrap {
+  z-index: 99999 !important;
+}
+

@@ -1,0 +1,52 @@
+/**** pagination ****/
+.pagination-wrapper {
+	text-align: right;
+	margin-top: 65px;
+
+	@include media-query(991px) {
+		text-align: left;
+		margin-top: 55px;
+	}
+
+	@include media-query(767px) {
+		margin-top: 45px;
+	}
+
+	.pg-pagination {
+		display: inline-block;
+		overflow: hidden;
+		list-style-type: none;
+		text-align: center;
+
+		li {
+			float: left;
+			margin-right: 10px;
+
+			@include media-query(767px) {
+				margin-right: 5px;
+			}
+		}
+
+		li:last-child {
+			margin-right: 0;
+		}
+
+		li a {
+			font-family: $heading-font;
+			background-color: #e0e3e8;
+			display: block;
+			width: 27px;
+			height: 27px;
+			line-height: 27px;
+			color: $blog-theme-color;
+			font-weight: 500;
+			border-radius: 3px;
+		}
+
+		.active a,
+		li a:hover {
+			background-color: $blog-theme-color;
+			color: $white;
+		}
+	}
+}

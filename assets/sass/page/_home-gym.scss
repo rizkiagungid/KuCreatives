@@ -1,0 +1,698 @@
+/*--------------------------------------------------------------
+	#home gym
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#13.0	gym-departments
+--------------------------------------------------------------*/
+.gym-about-section {
+	.gym-section-title {
+		margin-left: -68px;
+
+		@include media-query(991px) {
+			margin-left: 0;
+		}
+	}
+
+	.about-text {
+		padding-left: 68px;
+		margin-top: 100px;
+
+		@include media-query(991px) {
+			padding: 0;
+			margin-top: 30px;
+		}
+
+		p {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			margin-bottom: 1.7em;
+
+			@include media-query(991px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+	}
+
+	.gym-theme-btn-s2 {
+		margin-top: 13px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#13.1	gym-cta-section
+--------------------------------------------------------------*/
+.gym-cta-section {
+	@include background-style("../images/gym/cta-bg.jpg", center center, cover, no-repeat, local);
+	padding: 75px 0;
+
+	h2 {
+		font-size: 36px;
+		font-size: calc-rem-value(36);
+		font-weight: 600;
+		color: $white;
+		margin: 0 0 0.19em;
+		
+		@include media-query(991px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+		}
+
+		@include media-query(767px) {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+		}
+	}
+
+	h2 + span {
+		font-family: $heading-font;
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		font-weight: 600;
+		color: $gym-theme-color;
+		margin-bottom: 15px;
+		display: block;
+
+		@include media-query(991px) {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+		}
+	}
+
+	.text p {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		color: $white;
+		margin-bottom: 2.4em;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#13.2	gym-programs-section
+--------------------------------------------------------------*/
+.gym-programs-section {
+	padding-bottom: 90px;
+
+	@include media-query(991px) {
+		padding-bottom: 70px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 60px;
+	}
+
+	.grid .details {
+		padding: 28px 25px;
+		text-align: center;
+	}
+
+	.grid .details h3 {
+		font-size: 24px;
+		font-size: calc-rem-value(24);
+		color: #333;
+		margin: 0 0 0.5em;
+		text-transform: uppercase;
+
+		@include media-query(991px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+	}
+
+	.grid .details p {
+		margin-bottom: 2em;
+	}
+
+	.grid .details .join {
+		font-family: $heading-font;
+		font-size: 17px;
+		font-size: calc-rem-value(17);
+		font-weight: 600;
+		color: $gym-theme-color;
+		border: 2px solid transparent;
+		padding: 8px 30px;
+		border-radius: 40px;
+		display: inline-block;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			border: 2px solid $gym-theme-color;
+			padding: 8px 20px;
+		}
+	}
+
+	.grid img {
+		@include widther(992px) {
+			-webkit-filter: grayscale(100%); 
+			filter: grayscale(100%);
+
+		}
+	}
+
+	.grid {
+		@include transition-time(0.5s);
+	}
+
+	@include widther(992px) {
+		.grid:hover {
+			position: relative;
+			z-index: 10;
+			-webkit-transform: scale(1.1,1.1);
+			transform: scale(1.1,1.1);
+		}
+
+		.owl-carousel .owl-stage-outer {
+			overflow: visible;
+		}
+
+		.grid:hover .details .join {
+			border: 2px solid $gym-theme-color;
+		}
+
+		.grid:hover img {
+			-webkit-filter: grayscale(0); 
+			filter: grayscale(0);
+
+		}
+	}
+
+
+	.owl-controls {
+		margin-top: 55px;
+
+		@include media-query(991px) {
+			margin-top: 35px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 25px;
+		}
+	}
+
+	.owl-controls .owl-dots .owl-dot span {
+		background: #a0a0a0;
+		width: 14px;
+		height: 14px;
+
+		@include media-query(991px) {
+			width: 12px;
+			height: 12px;
+		}
+	}
+
+	.owl-controls .owl-dots .active span {
+		background: $gym-theme-color;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#13.3	gym-why-choose-gallery
+--------------------------------------------------------------*/
+.gym-why-choose-gallery {
+	@include background-style("../images/gym/gallery/gallery-bg.jpg", center center, cover, no-repeat, local);
+	position: relative;
+
+	&:before {
+		content: "";
+		@include overlay(transparentize(#313845, 0.1));
+	}
+
+	.gym-section-title-s2 {
+		h2 {
+			color: $white;
+		}
+
+		p {
+			color: #999;
+		}
+	}
+
+	.fun-fact-grids {
+		overflow: hidden;
+
+		.grid {
+			width: 25%;
+			float: left;
+			text-align: center;
+
+			@include media-query(767px) {
+				width: 50%;
+				height: 150px;
+			}
+		}
+	}
+
+	.fun-fact-grids .counter-holder h3,
+	.fun-fact-grids .counter-holder h3 + span {
+		font-family: $heading-font;
+		font-size: 36px;
+		font-size: calc-rem-value(36);
+		font-weight: bold;
+		color: $gym-theme-color;
+		display: inline-block;
+
+		@include media-query(1199px) {
+			font-size: 32px;
+			font-size: calc-rem-value(32);
+		}
+
+		@include media-query(991px) {
+			font-size: 26px;
+			font-size: calc-rem-value(26);
+		}
+
+		@include media-query(767px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+	}
+
+	.fun-fact-grids .counter-holder h3 {
+		margin: 25px 0 0 0;
+
+		@include media-query(767px) {
+			margin: 15px 0 0 0;
+		}
+	}
+
+	.fun-fact-grids p {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		color: $white;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.fun-fact-grids .icon img {
+		@include media-query(991px) {
+			max-width: 50px;
+		}
+	}
+
+	.gym-gallery-grids {
+		position: relative;
+		z-index: 10;
+		margin-top: 120px;
+
+		@include media-query(767px) {
+			margin-top: 40px;
+		}
+
+		.grid {
+			position: relative;
+			@include transition-time(0.3s);
+		}
+
+		.grid:before {
+			content: "";
+			@include overlay(transparentize($black, 0.5));
+			z-index: 1;
+		}
+
+		.grid .inner {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			opacity: 0;
+			visibility: hidden;
+			@include transition-time(0.3s);
+		}
+
+		.grid .inner a {
+			color: $white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include center-by-translating();
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	@include widther(767px) {
+		.gym-gallery-grids .owl-stage-outer {
+			overflow: visible;
+		}
+
+		.gym-gallery-grids .owl-stage > .center .grid {
+			-webkit-transform: scale(1.2,1.2);
+			transform: scale(1.2,1.2);
+			position: relative;
+			z-index: 10;
+			border: 2px solid $white;
+			padding: 7px;
+		}
+
+		.gym-gallery-grids .center .grid .inner:before {
+			content: "";
+			background-color: transparentize($gym-theme-color, 0.3);
+			width: calc(100% - 30px);
+			height: calc(100% - 30px);
+			position: absolute;
+			left: 15px;
+			top: 15px;
+		}
+
+		.gym-gallery-grids .center .grid .inner a {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.owl-controls {
+			width: 100%;
+		    margin: 0;
+		    position: absolute;
+		    left: 0;
+		    top: 50%;
+		    @include translatingY();
+		}
+
+		.owl-controls .owl-nav .owl-prev,
+		.owl-controls .owl-nav .owl-next {
+			background: transparentize($white, 0.6);
+			width: 55px;
+			height: 55px;
+			line-height: 58px;
+			font-size: 18px;
+			padding: 0;
+			border-radius: 50%;
+
+			&:hover {
+				background: transparentize($gym-theme-color, 0.5);
+			}
+		}
+
+		.owl-controls .owl-nav .owl-prev {
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+			left: 0;
+		}
+
+		.owl-controls .owl-nav .owl-next {
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+			right: 0;
+		}
+	}
+
+
+	.center .grid:hover {
+		.inner {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@include media-query(767px) {
+
+		.owl-controls {
+			margin-top: 35px;
+		}
+
+		.owl-controls .owl-nav .owl-prev,
+		.owl-controls .owl-nav .owl-next {
+			background: $gym-theme-color;
+			width: 35px;
+			height: 35px;
+			line-height: 38px;
+			padding: 0;
+			border-radius: 0;
+
+			&:hover {
+				background: darken($gym-theme-color, 10%);
+			}
+		}
+	}
+
+	@include media-query(767px) {
+		.gym-gallery-grids .grid .inner a {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid $white;
+			border-radius: 50%;
+			text-align: center;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#13.4	gym-schedule-section
+--------------------------------------------------------------*/
+.gym-schedule-section {
+	.schedule-table table {
+		font-family: $heading-font;
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		font-weight: 500;
+		color: #333;
+
+		@include media-query(1199px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+
+		@include media-query(991px) {
+			font-size: 12px;
+			font-size: calc-rem-value(12);
+		}
+	}
+
+	.schedule-table table,
+	.schedule-table th,
+	.schedule-table td {
+		border: 1px solid #ececec;
+		border-collapse: collapse;
+		text-align: center;
+	}
+
+	.schedule-table th {
+		background-color: $gym-theme-color;
+		color: $white;
+		padding: 13px 10px;
+		font-weight: normal;
+		border-color: $gym-theme-color;
+	}
+
+	.schedule-table td {
+		padding: 24px 15px;
+
+		@include media-query(1199px) {
+			padding: 20px 15px;
+		}
+
+		@include media-query(991px) {
+			padding: 15px 10px;
+		}
+	}
+
+	.schedule-table tbody > tr > td:first-child {
+		text-transform: uppercase;
+	}
+
+	.schedule-table tbody > tr:nth-child(2n) {
+		background-color: #dadada;
+	}
+
+	.schedule-table td .adults,
+	.schedule-table td .kids {
+		color: $gym-theme-color;
+	}
+
+	.download {
+		text-align: center;
+		margin-top: 30px;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#13.5	gym-testimonials-section
+--------------------------------------------------------------*/
+.gym-testimonials-section {
+	background-color: #f4f4f4;
+	padding-bottom: 90px;
+
+	@include media-query(991px) {
+		padding-bottom: 70px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 60px;
+	}
+
+	.grid {
+		background-color: $white;
+		padding: 30px 33px 60px;
+		margin-bottom: 50px;
+		position: relative;
+
+		&:before {
+			content: "";
+			@include background-style("../images/gym/testimonials/quote.png", center center, cover, no-repeat, local);			
+			width: 38px;
+			height: 34px;
+			position: absolute;
+			right: 33px;
+			top: 20px;
+
+			@include media-query(991px) {
+				display: none;
+			}
+		}
+
+		@include media-query(991px) {
+			padding: 35px 30px;
+			margin-bottom: 30px;
+		}
+
+		@include media-query(767px) {
+			padding: 25px 20px;
+		}
+	}
+
+	.grid img {
+		width: auto;
+	}
+
+	.client-info {
+		min-height: 54px;
+		position: relative;
+		padding-left: 60px;
+		margin-bottom: 20px;
+
+		@include media-query(767px) {
+			padding: 0;
+		}
+
+		img {
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			@include media-query(767px) {
+				position: static;
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+		}
+
+		h4 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			color: #333;
+			margin: 0;
+			padding: 6px 0 2px;
+
+			@include media-query(767px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+		}
+
+		> span {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			color: #999;
+		}
+	}
+
+	.client-quote p {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		color: #666;
+		margin: 0;
+	}
+
+	.gym-testimonials-slider .owl-controls {
+		margin-top: 0;
+
+		.owl-dots .owl-dot span {
+			background-color: #a0a0a0;
+			width: 13px;
+			height: 13px;
+		}
+
+		.owl-dots .active span {
+			background: $gym-theme-color;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#13.6	gym-site-footer
+--------------------------------------------------------------*/
+.gym-site-footer {
+
+	.upper-footer {
+		background-color: #0d1117;
+	}
+
+	.upper-footer a:hover {
+		color: $gym-theme-color;
+	}
+
+	.upper-footer .links-widget ul li:before {
+		color: #8a8a8a;
+	}
+
+	.upper-footer .links-widget ul li:hover:before {
+		color: $gym-theme-color;
+	}
+
+	.about-widget ul li i {
+		color: $gym-theme-color;
+	}
+
+	.twitter-feed-widget a {
+		color: $white;
+
+		&:hover {
+			color: $gym-theme-color;
+		}
+	}
+
+	.twitter-feed-widget ul li + li {
+		border-top: 1px solid #292929;
+	}
+
+	.copyright-info {
+		background-color: #05080d;
+		border: 0;
+	}
+
+	.copyright-info .copyright-area a {
+		color: $gym-theme-color;
+	}
+
+	.copyright-info .social-links a:hover {
+		color: $gym-theme-color;
+	}
+
+	.copyright-info p {
+		color: #8a8a8a;
+	}
+}

@@ -1,0 +1,317 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Theme Name: 	infinite-plus	
+Version:        1.0.0
+Author:         themexriver
+URL:            http://themeforest.net/user/themexriver
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+#0.1	Theme Reset Style
+#0.2	Global Elements
+#0.3	header
+#0.4	hero-slider
+#0.5	footer
+
+--------------------------------------------------------------
+	#home business
+----------------------------------------------------------------
+#0.6	business-services
+#0.7	business-about-section
+#0.8	business-cta
+#0.9	statistics-section
+#1.0	business-features-section
+#1.1	business-team-section
+#1.2	business-newsletter-section
+#1.3	business-projects-section
+#1.4	business-testimonials-section
+#1.5	business-partners-section
+#1.6	business-blog-section
+#1.7	business-contact-section 
+
+
+--------------------------------------------------------------
+	#home finance
+----------------------------------------------------------------
+#2.0	finance-services-section
+#2.1	finance-cta
+#2.2	finance-services-section-s2
+#2.3	finance-about-section
+#2.4	finance-projects-section
+#2.5	finance-partners-section
+#2.6	finance-testimonials-section
+#2.7	finance-newsletter-section
+#2.8	finance-blog-section
+#2.9	finance-contact-section
+#2.10	finance-site-footer
+
+
+--------------------------------------------------------------
+	#home consulting
+----------------------------------------------------------------
+#3.0	consulting-services-section 
+#3.1	consulting-about-section
+#3.2	consulting-projects-section
+#3.3	consulting-fun-fact
+#3.4	consulting-case-studies
+#3.5	consulting-testimonials-section
+#3.6	consulting-blog-section
+#3.7	consulting-partners-section
+#3.8	consulting-contact-section
+#3.9	consulting-site-footer
+
+
+--------------------------------------------------------------
+	#home construction
+----------------------------------------------------------------
+#4.0	construction-services-section 
+#4.1	construction-about-section 
+#4.2	construction-why-choose-section
+#4.3	construction-cta
+#4.4	construction-testimonials-section
+#4.5	construction-projects-section
+#4.6	construction-team-section
+#4.7	construction-cta-newsletter
+#4.8	construction-blog-section
+#4.9	construction-contact-section
+#4.10	construction-partners-section
+#4.11	construction-site-footer
+
+
+--------------------------------------------------------------
+	#home transport
+----------------------------------------------------------------
+#5.0	transport-services-section 
+#5.1	transport-about-section
+#5.2	transport-why-choose-section 
+#5.3	transport-team-section
+#5.4	transport-cta
+#5.5	transport-testimonials-section
+#5.6	transport-faq-news
+#5.7	transport-map-section
+#5.8	transport-contact-section
+#5.9	transport-site-footer
+
+
+--------------------------------------------------------------
+	#home lawyer
+----------------------------------------------------------------
+#6.0	lawyer-features-section
+#6.1	lawyer-about-section
+#6.2	lawyer-cta-section
+#6.3	lawyer-services-section
+#6.4	lawyer-cta-section-s2
+#6.5	lawyer-packages
+#6.6	lawyer-cta-section-s3
+#6.7	lawyer-attorneys-section
+#6.8	lawyer-testimonials-section
+#6.9	lawyer-blog-section
+#6.10	lawyer-cta-s4
+#6.11	lawyer-contact-section
+#6.12	lawyer-site-footer
+
+
+--------------------------------------------------------------
+	#home event
+----------------------------------------------------------------
+#7.0	event-start-section
+#7.1	event-about-conference
+#7.2	event-team-section
+#7.3	event-schedule-section
+#7.4	event-partners-section
+#7.5	event-pricing-section
+#7.6	reserve-ticket-section
+#7.7	event-testimonials-faq-section 
+#7.8	event-blog-section
+#7.9	event-site-footer
+
+
+--------------------------------------------------------------
+	#home event
+----------------------------------------------------------------
+#8.0	app-landing-overview
+#8.1	app-landing-features
+#8.2	app-landing-testimonials
+#8.3	app-landing-cta
+#8.4	app-landing-screenshot
+#8.5	app-landing-pricing
+#8.6	app-landing-newsletter-contact
+
+
+--------------------------------------------------------------
+	#home minimal portfolio
+----------------------------------------------------------------
+#9.0	minimal-portfolio-portfolio-section
+#9.1	minimal-portfolio-about-section
+#9.2	minimal-portfolio-testimonials
+#9.3	minimal-portfolio-cta
+#9.4	minimal-portfolio-blog
+#9.5	minimal-portfolio-contact
+#9.6	minimal-portfolio-footer
+
+
+--------------------------------------------------------------
+	#home church
+----------------------------------------------------------------
+#10.0	church-cta
+#10.1	church-sermons
+#10.2	cta-s2
+#10.3	church-events
+#10.4	church-quote-section
+#10.5	church-causes-section
+#10.6	cta-s3
+#10.7	church-photo-gallery
+#10.8	church-blog-section
+#10.8	church-site-footer
+
+
+--------------------------------------------------------------
+	#home hotel
+----------------------------------------------------------------
+#11.0	hotel-about-section
+#11.1	hotel-deal-section
+#11.2	hotel-rooms-section
+#11.3	hotel-dining-section
+#11.4	hotel-gallery-section
+#11.5	hotel-events-section
+#11.6	hotel-news-testimonials
+#11.7	hotel-cta
+#11.8	hotel-site-footer
+
+
+--------------------------------------------------------------
+	#home medical
+----------------------------------------------------------------
+#12.0	medical-departments
+#12.1	medical-appointment-section
+#12.2	medical-doctors-section
+#12.3	medical-doctors-section
+#12.4	medical-about-section
+#12.5	medical-gallery-section
+#12.6	medical-testimonials-section
+#12.7	medical-blog-section
+#12.8	medical-newsletter-section
+#12.9	medical-site-footer
+
+
+--------------------------------------------------------------
+	#home gym
+----------------------------------------------------------------
+#13.0	gym-departments
+#13.1	gym-cta-section
+#13.2	gym-programs-section
+#13.3	gym-why-choose-gallery
+#13.4	gym-schedule-section
+#13.5	gym-testimonials-section
+#13.6	gym-site-footer
+
+
+--------------------------------------------------------------
+	#home restaurant
+----------------------------------------------------------------
+#14.0	restaurant-about-section
+#14.1	restaurant-cta-section
+#14.2	restaurant-menu-section
+#14.3	restaurant-cta-s2
+#14.4	reserve-table-form
+#14.5	restaurant-gallery-section
+#14.6	restaurant-chefs-section
+#14.7	restaurant-testimonials-section
+#14.8	restaurant-site-footer
+
+
+--------------------------------------------------------------
+	#home photography
+----------------------------------------------------------------
+#15.0	photography-about-section
+#15.1	photography-gallery
+#15.2	photography-blog-section
+#15.3	photography-contact-section
+
+
+--------------------------------------------------------------
+	#home agency
+----------------------------------------------------------------
+#16.0 agency-services-section
+#16.1 agency-about-section
+#16.2 agency-portfolio-section
+#16.3 agency-testimonials-section
+#16.4 agency-newsletter-section
+#16.5 agency-team-section
+#16.6 agency-partners-section
+#16.7 agency-blog-section
+#16.8 agency-contact-section
+#16.9 agency-site-footer
+
+
+--------------------------------------------------------------
+	#home seo
+----------------------------------------------------------------
+#17.0 seo-partners-section
+#17.1 seo-about-section
+#17.2 seo-services-section
+#17.3 seo-cb-section
+#17.4 seo-pricing-section
+#17.5 seo-newsletter-section
+#17.6 seo-testimonials-section
+#17.7 seo-projects-section
+#17.8 seo-team-section
+#17.9 seo-blog-section
+#17.10 seo-site-footer
+
+
+----------------------------------------------------------------*/
+
+
+// helpers
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+
+// base
+@import "base/base";
+
+
+// components
+@import "components/section-title";
+@import "components/buttons";
+@import "components/form";
+@import "components/social-links";
+@import "components/page-title";
+@import "components/preloader";
+@import "components/blog-sidebar";
+@import "components/pagination";
+
+// layout
+@import "layout/header";
+@import "layout/hero-slider";
+@import "layout/footer";
+
+// components
+@import "components/sticky-header";
+
+// page
+@import "page/home-default";
+@import "page/home-finance";
+@import "page/home-consulting";
+@import "page/home-construction";
+@import "page/home-transport";
+@import "page/home-lawyer";
+@import "page/home-event";
+@import "page/home-app-landing";
+@import "page/home-portfolio";
+@import "page/home-church";
+@import "page/home-hotel";
+@import "page/home-medical";
+@import "page/home-gym";
+@import "page/home-restaurant";
+@import "page/home-photography";
+@import "page/home-agency";
+@import "page/home-seo";
+@import "page/blog-classic";
+@import "page/blog-details";
+
+

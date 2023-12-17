@@ -1,0 +1,73 @@
+.sticky-header {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: -200px;
+	z-index: 9999;
+	opacity: 0;
+	@include transition-time(0.7s);
+}
+
+.sticky-on {
+	opacity: 1;
+	top: 0;
+}
+
+.transport-header .sticky-header {
+	background: $transport-theme-color2;
+}
+
+.lawyer-header .sticky-header {
+	background: #0e0c0d;
+}
+
+.app-landing-header .sticky-header {
+	background: $applanding-theme-color;
+	@include linear-gradient-bg(left, $applanding-theme-color, $applanding-theme-color2);
+
+	@include widther(992px) {
+		#navbar > ul > li > a {
+			color: $white;
+		}
+	}
+}
+
+.portfolio-header .sticky-header {
+	background: #fff;
+
+	#navbar > ul > li > a {
+		color: #333;
+	}
+
+	#navbar > ul > li.current-menu-item > a,
+	#navbar > ul > li > a:hover {
+		color: #000;
+	}
+}
+
+.church-header .sticky-header {
+	border: 1px solid #e8e7e7;
+}
+
+
+.hotel-header .sticky-header {
+	background: #111;
+}
+
+.gym-header .sticky-header {
+	background: #121212;
+}
+
+.photography-header .sticky-header {
+	@include widther(992px) {
+		display: none !important;
+	}
+	@include media-query(991px) {
+		border-bottom: 1px solid #dcd9dc;
+	}
+}
+
+.seo-header .sticky-header {
+	border: 1px solid #e8e7e7;
+}
+

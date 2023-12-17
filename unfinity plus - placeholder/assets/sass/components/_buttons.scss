@@ -1,0 +1,981 @@
+/*******************************
+	business theme btns
+*********************************/
+.business-theme-btn {
+	font-family: $heading-font;
+	background-color: $business-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	color: $white;
+	padding: 12px 40px;
+	display: inline-block;
+
+	@include media-query(1199px) {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		padding: 10px 35px;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 10px 30px;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 30px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($business-theme-color, 15%);
+		color: $white;
+	}
+}
+
+.business-theme-btn-s2 {
+	@extend .business-theme-btn;
+	background-color: $business-theme-color2;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $business-theme-color;
+	}
+}
+
+
+/*******************************
+	finance theme btns
+*********************************/
+.finance-theme-btn {
+	font-family: $heading-font;
+	background-color: $finance-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	color: $white;
+	padding: 12px 48px 12px 35px;
+	border: 0;
+	@include rounded-border(5px);
+	display: inline-block;
+	position: relative;
+
+	&:after {
+		font-family: "FontAwesome";
+		content: "\f0da";
+		color: $finance-theme-color2;
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		@include translatingY();
+
+		@include media-query(991px) {
+			right: 15px;
+		}
+	}
+
+	@include media-query(1199px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 10px 40px 10px 25px;
+	}
+
+	@include media-query(991px) {
+		font-size: 13px;
+		font-size: calc-rem-value(13);
+		padding: 9px 30px 9px 15px;
+	}
+
+	@include media-query(767px) {
+		font-size: 12px;
+		font-size: calc-rem-value(12);
+		padding: 8px 30px 8px 15px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $finance-theme-color2;
+		color: $finance-theme-color;
+	}
+
+	&:hover:after {
+		color: $finance-theme-color;
+	}
+}
+
+.finance-theme-btn-s2 {
+	@extend .finance-theme-btn;
+	background-color: $finance-theme-color2;
+	color: $finance-theme-color;
+
+	&:after {
+		color: $finance-theme-color;
+	}
+}
+
+
+/*******************************
+	consulting theme btns
+*********************************/
+.consulting-theme-btn {
+	font-family: $heading-font;
+	background: $consulting-theme-color;
+	@include linear-gradient-bg(left, $consulting-theme-color, $consulting-theme-color2);
+	font-size: 18px;
+	font-size: calc-rem-value(18);
+	color: $white;
+	padding: 10px 30px;
+	display: inline-block;
+
+	@include media-query(1199px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 20px;
+	}
+
+	&:hover {
+		background-color: $consulting-theme-color3;
+		color: $white;
+	}
+}
+
+.consulting-theme-btn-s2 {
+	@extend .consulting-theme-btn;
+
+	background: $consulting-theme-color3;
+	color: $white;
+}
+
+.consulting-theme-btn-s3 {
+	@extend .consulting-theme-btn;
+	font-size: 15px;
+	font-size: calc-rem-value(15);
+	
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+	}
+
+	&:hover {
+		background: $consulting-theme-color3;
+		@include linear-gradient-bg(left, $consulting-theme-color2, $consulting-theme-color);
+	}
+} 
+
+
+/*******************************
+	construction theme btns
+*********************************/
+.construction-theme-btn {
+	font-family: $heading-font;
+	background-color: $construction-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	color: #052139;
+	padding: 9px 30px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		padding: 8px 25px;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 7px 20px;
+	}
+
+	&:hover {
+		background-color: $white;
+		color: #052139;
+	}
+}
+
+.construction-theme-btn-s2 {
+	@extend .construction-theme-btn;
+	background-color: $white;
+}
+
+.construction-theme-btn-s3 {
+	@extend .construction-theme-btn;
+
+	&:hover {
+		background-color: darken($construction-theme-color, 10%);
+	}
+}
+
+
+/*******************************
+	transport theme btns
+*********************************/
+.transport-theme-btn {
+	font-family: $heading-font;
+	background-color: $transport-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	color: $white;
+	padding: 9px 30px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		padding: 8px 25px;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 7px 20px;
+	}
+
+	&:hover {
+		background-color: $white;
+		color: $black;
+	}
+}
+
+.transport-theme-btn-s2 {
+	@extend .transport-theme-btn;
+
+	background-color: $white;
+	color: $black;
+
+	&:hover {
+		color: $transport-theme-color;
+	}
+}
+
+.transport-theme-btn-s3 {
+	@extend .transport-theme-btn;
+
+	&:hover {
+		background-color: darken($transport-theme-color, 5%);
+		color: $white;
+	}
+} 
+
+
+/*******************************
+	lawyer theme btns
+*********************************/
+.lawyer-theme-btn {
+	background-color: $lawyer-theme-color;
+	font-size: 14px;
+	font-size: calc-rem-value(14);
+	font-weight: 600;
+	color: $white;
+	padding: 15px 30px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		padding: 12px 25px;
+	}
+
+	@include media-query(767px) {
+		padding: 10px 22px;
+	}
+
+	&:hover {
+		background-color: darken($lawyer-theme-color, 10%);
+		color: $white;
+	}
+}
+
+.lawyer-theme-btn-s2 {
+	background-color: $lawyer-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	color: $white;
+	padding: 9px 30px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		padding: 8px 25px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 22px;
+	}
+
+	&:hover {
+		background-color: darken($lawyer-theme-color, 10%);
+		color: $white;
+	}
+}
+
+
+/*******************************
+	event theme btns
+*********************************/
+.event-theme-btn {
+	background: $event-theme-color;
+	@include linear-gradient-bg(left, $event-theme-color, $event-theme-color2);
+	font-family: $heading-font;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 500;
+	color: $white;
+	padding: 11px 45px;
+	display: inline-block;
+	border-radius: 40px;
+	@include transition-time(0.3s);
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 11px 35px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 25px;
+	}
+
+	&:hover {
+		background-color: $event-theme-color2;
+		@include linear-gradient-bg(left, $event-theme-color2, $event-theme-color);
+		color: $white;
+	}
+}
+
+.event-theme-btn-s2 {
+	@extend .event-theme-btn;
+	
+	padding: 11px 25px;
+	
+	@include media-query(991px) {
+		padding: 11px 20px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 15px;
+	}
+}
+
+
+/*******************************
+	minimal-portfolio theme btns
+*********************************/
+.minimal-portfolio-theme-btn {
+	font-family: $heading-font;
+	background-color: #333;
+	font-weight: 500;
+	color: $white;
+	padding: 12px 42px;
+	display: inline-block;
+	text-transform: uppercase;
+
+	@include media-query(991px) {
+		padding: 10px 35px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 25px;
+	}
+
+	&:hover {
+		background-color: #111;
+		color: $white;
+	}
+}
+
+.minimal-portfolio-theme-btn-s2 {
+	@extend .minimal-portfolio-theme-btn;
+	padding: 12px 25px;
+
+	@include media-query(991px) {
+		padding: 10px 20px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 15px;
+	}
+}
+
+
+/*******************************
+	church theme btns
+*********************************/
+.church-theme-btn {
+	font-family: $heading-font;
+	background-color: $church-theme-color;
+	font-size: 14px;
+	font-size: calc-rem-value(14);
+	font-weight: 600;
+	color: $white;
+	padding: 10px 30px;
+	display: inline-block;
+	border-radius: 25px;
+
+	&:hover {
+		background-color: darken($church-theme-color, 10%);
+		color: $white;
+	}
+}
+
+.church-theme-btn-s2 {
+	font-family: $heading-font;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	color: $white;
+	padding: 9px 50px;
+	border: 2px solid $church-theme-color;
+	border-radius: 45px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 35px;
+	}
+
+	&:hover {
+		background-color: $church-theme-color;
+		color: $white;
+	}
+}
+
+.church-theme-btn-s3 {
+	@extend .church-theme-btn-s2;
+	border: 1px solid $church-theme-color;
+	color: $black;
+	padding: 9px 25px;
+}
+
+.church-theme-btn-s4 {
+	font-family: $heading-font;
+	background-color: $church-theme-color;
+	font-weight: 600;
+	color: $white;
+	padding: 7px 22px;
+	border-radius: 40px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 13px;
+		font-size: calc-rem-value(13);
+	}
+
+	&:hover {
+		background-color: darken($church-theme-color, 10%);
+		color: $white;
+	}
+}
+
+
+/*******************************
+	hotel theme btns
+*********************************/
+.hotel-theme-btn {
+	font-family: $heading-font;
+	background-color: #111;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	color: $hotel-theme-color;
+	padding: 11px 65px;
+	display: inline-block;
+
+	&:hover {
+		background-color: darken(#111, 5%);
+		color: $hotel-theme-color;
+	}
+
+	@include media-query(1199px) {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		padding: 11px 35px;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 25px;
+	}
+}
+
+.hotel-theme-btn-s2 {
+	font-family: $heading-font;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	color: $white;
+	border: 2px solid $hotel-theme-color;
+	padding: 9px 40px;
+	display: inline-block;
+	text-transform: uppercase;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		border: 2px solid $hotel-theme-color;
+		padding: 8px 25px;
+	}
+
+	@include media-query(767px) {
+		font-size: 13px;
+		font-size: calc-rem-value(13);
+		border: 1px solid $hotel-theme-color;
+		padding: 7px 20px;
+	}
+
+	&:hover {
+		background-color: $hotel-theme-color;
+		color: $white;
+	}
+}
+
+.hotel-theme-btn-s3 {
+	@extend .hotel-theme-btn-s2;
+
+	width: 170px;
+	font-size: 14px;
+	font-size: calc-rem-value(14);
+	padding: 9px 0;
+
+	@include media-query(991px) {
+		width: 150px;		
+		padding: 8px 0;
+	}
+
+	@include media-query(767px) {
+		width: 120px;
+		font-size: 13px;
+		font-size: calc-rem-value(13);
+		border: 1px solid $hotel-theme-color;
+		padding: 7px 0;
+	}
+}
+
+.hotel-theme-btn-s4 {
+	font-family: $heading-font;
+	background-color: #f2f1ed;
+	font-weight: 500;
+	color: #000001;
+	padding: 6px 25px;
+	display: inline-block;
+
+	&:hover {
+		background-color: $hotel-theme-color;
+		color: $white;
+	}
+}
+
+
+/*******************************
+	medical theme btns
+*********************************/
+.medical-theme-btn {
+	font-family: $heading-font;
+	background-color: $medical-theme-color;
+	font-size: 18px;
+	font-size: calc-rem-value(18);
+	font-weight: 500;
+	color: $white;
+	padding: 10px 42px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		padding: 10px 35px;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 25px;
+	}
+
+	&:hover {
+		background-color: $medical-theme-color2;
+		color: $white;
+	}
+}
+
+.medical-theme-btn-s2 {
+	@extend .medical-theme-btn;
+	background-color: $medical-theme-color2;
+
+	&:hover {
+		background-color: $medical-theme-color;
+		color: $white;
+	}
+}
+
+.medical-theme-btn-s3 {
+	@extend .medical-theme-btn;
+
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	padding: 10px 42px;
+
+	@include media-query(991px) {
+		padding: 10px 35px;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 25px;
+	}
+}
+
+
+/*******************************
+	gym theme btns
+*********************************/
+.gym-theme-btn {
+	font-family: $heading-font;
+	background-color: $gym-theme-color;
+	font-size: 18px;
+	font-size: calc-rem-value(18);
+	font-weight: 500;
+	color: $white;
+	padding: 10px 40px;
+	display: inline-block;
+
+	@include media-query(1199px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 10px 30px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 25px;
+	}
+
+	&:hover {
+		background-color: darken($gym-theme-color, 10%);
+		color: $white;
+	}
+}
+
+.gym-theme-btn-s2 {
+	font-family: $heading-font;
+	background-color: $gym-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 500;
+	color: $white;
+	padding: 9px 35px;
+	border-radius: 45px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 30px;
+	}
+
+	@include media-query(767px) {
+		padding: 7px 25px;
+	}
+
+	&:hover {
+		background-color: darken($gym-theme-color, 10%);
+		color: $white;
+	}
+}
+
+.gym-theme-btn-s3 {
+	font-family: $heading-font;
+	font-size: 18px;
+	font-size: calc-rem-value(18);
+	font-weight: 500;
+	color: $gym-theme-color;
+	border: 2px solid $gym-theme-color;
+	padding: 6px 40px;
+	display: inline-block;
+	border-radius: 40px;
+
+	&:hover {
+		background-color: $gym-theme-color;
+		color: $white;
+	}
+	
+	@include media-query(1199px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		padding: 6px 30px;
+	}
+	
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 6px 25px;
+	}
+
+	@include media-query(767px) {
+		padding: 6px 22px;
+	}
+}
+
+
+/*******************************
+	restaurant theme btns
+*********************************/
+.restaurant-theme-btn {
+	font-family: $heading-font;
+	background-color: $restaurant-theme-color;
+	font-size: 18px;
+	font-size: calc-rem-value(18);
+	font-weight: 500;
+	color: $white;
+	padding: 10px 40px;
+	display: inline-block;
+	border-radius: 40px;
+
+	@include media-query(1199px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 10px 30px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 25px;
+	}
+
+	&:hover {
+		background-color: darken($restaurant-theme-color, 10%);
+		color: $white;
+	}
+}
+
+.restaurant-theme-btn-s2 {
+	@extend .restaurant-theme-btn;
+	
+	background-color: transparent;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	padding: 9px 38px;
+	color: $restaurant-theme-color;
+	border: 1px dashed $restaurant-theme-color;
+
+	&:hover {
+		background-color: $restaurant-theme-color;
+		color: $white;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 9px 30px;
+	}
+
+	@include media-query(767px) {
+		padding: 7px 25px;
+	}
+}
+
+.restaurant-theme-btn-s3 {
+	@extend .restaurant-theme-btn;
+
+	border-radius: 0;
+	padding: 10px 30px;
+
+	@include media-query(1199px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 10px 25px;
+	}
+
+	@include media-query(767px) {
+		padding: 8px 20px;
+	}
+}
+
+
+/*******************************
+	photography theme btns
+*********************************/
+.photography-theme-btn {
+	font-family: $heading-font;
+	background-color: $photography-theme-color;
+	font-size: 20px;
+	font-size: calc-rem-value(20);
+	font-weight: 500;
+	color: $white;
+	padding: 7px 28px;
+	display: inline-block;
+
+	@include media-query(1199px) {
+		font-size: 18px;
+		font-size: calc-rem-value(18);    
+	}
+
+	@include media-query(991px) {
+		font-size: 15px;
+		font-size: calc-rem-value(15);    
+	}
+
+	&:hover {
+		background-color: darken($photography-theme-color, 10%);
+		color: $white;
+	}
+}
+
+
+/*******************************
+	agency theme btns
+*********************************/
+.agency-theme-btn {
+	font-family: $heading-font;
+	background: $white;
+	background: $agency-theme-color;
+	@include linear-gradient-bg(left, $agency-theme-color, $agency-theme-color2);
+	font-size: 18px;
+	font-size: calc-rem-value(18);
+	font-weight: 600;
+	color: $white;
+	padding: 10px 45px;
+	display: inline-block;
+	border-radius: 40px;
+	position: relative;
+
+	@include media-query(1199px) {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		padding: 10px 35px;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 8px 25px;
+	}
+
+	&:before {
+		background: $white;
+		content: "";
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+
+	&:hover {
+		background: $agency-theme-color;
+		@include linear-gradient-bg(left, $agency-theme-color2, $agency-theme-color);
+		color: $white;
+	}
+}
+
+.agency-theme-btn-s2 {
+	font-family: $heading-font;
+	background: $agency-theme-color;
+	@include linear-gradient-bg(left, $agency-theme-color, $agency-theme-color2);
+	font-size: 15px;
+	font-size: calc-rem-value(15);
+	font-weight: 600;
+	color: $white;
+	padding: 12px 36px;
+	border-radius: 40px;
+	display: inline-block;
+	box-shadow: 0 3px 4px transparentize($agency-theme-color2, 0.5) ;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 10px 30px;
+	}
+
+	@include media-query(767px) {
+		padding: 9px 25px;
+	}
+
+	&:hover {
+		color: $white;
+		background: $agency-theme-color2;
+		@include linear-gradient-bg(left, $agency-theme-color2, $agency-theme-color);
+	}
+}
+
+
+/*******************************
+	seo theme btns
+*********************************/
+.seo-theme-btn {
+	font-family: $heading-font;
+	background-color: $seo-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	color: $white;
+	text-decoration: underline;
+	padding: 10px 28px;
+	display: inline-block;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+	}
+
+	@include media-query(767px) {
+		padding: 8px 20px;
+	}
+
+	&:hover {
+		background-color: darken($seo-theme-color, 10%);
+		color: $white;
+	}
+}
+
+.seo-theme-btn-s2 {
+	font-family: $heading-font;
+	background-color: $seo-theme-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	color: $white;
+	padding: 9px 50px;
+	display: inline-block;
+	border-radius: 5px;
+
+	&:hover {
+		color: $white;
+		opacity: 0.9;
+	}
+
+	@include media-query(767px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 9px 30px;
+	}
+}

@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+	#Blog classic
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+#18.0 blog-calassic-main-content
+--------------------------------------------------------------*/
+.blog-calassic-main-content {
+	.blog-grids > .grid + .grid {
+		margin-top: 35px;
+	}
+
+	.grid .entry-body {
+		padding: 45px 35px;
+		border: 1px solid #e8e8e8;
+
+		@include media-query(767px) {
+			padding: 30px 20px;
+		}
+	}
+
+	.entry-meta {
+		list-style: none;
+		overflow: hidden;
+
+		li {
+			float: left;
+		}
+
+		> li + li {
+			margin-left: 25px;
+
+			@include media-query(767px) {
+                margin-left: 15px;
+            }
+		}
+
+		li a {
+			color: #999999;
+		}
+	}
+
+	.entry-body {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+
+		@include media-query(767px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+	}
+
+	.entry-body h3 {
+		font-size: 22px;
+		font-size: calc-rem-value(22);
+		font-weight: 600;
+		line-height: 1.4em;
+		margin: 0.36em 0 0.4em;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+
+		a {
+			color: $blog-theme-color;
+		}
+	}
+
+	.entry-body .date {
+		color: #999999;
+		display: block;
+		margin-bottom: 13px;
+	}
+
+	.entry-body p {
+		color: #6a6a6a;
+		margin-bottom: 2.5em;
+	}
+
+	.entry-body .read-more {
+		color: $blog-theme-color;
+		text-decoration: underline;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
